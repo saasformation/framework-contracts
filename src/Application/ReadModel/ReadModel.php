@@ -26,9 +26,10 @@ abstract class ReadModel
     public abstract function toArray(): array;
 
     /**
+     * @param string $id
      * @param array<mixed> $data
      * @return static
      */
-    public static abstract function fromArray(array $data): static;
+    public static abstract function fromArray(string $id, array $data): static;
     public static abstract function code(): string;
 }
