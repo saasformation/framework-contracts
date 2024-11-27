@@ -7,5 +7,5 @@ use Psr\Log\LoggerInterface;
 
 interface ContainerProviderInterface
 {
-    public function provide(KernelInterface $kernel): ContainerInterface;
+    public function provide(KernelInterface $kernel, EnvVarsManagerInterface $envVarsManager): ContainerInterface;
 }
