@@ -22,22 +22,22 @@ trait PageableResponseBody
         $this->totalPages = $totalPages;
     }
 
-    protected function page(): int
+    public function page(): int
     {
         return $this->page;
     }
 
-    protected function perPage(): int
+    public function perPage(): int
     {
         return $this->perPage;
     }
 
-    protected function totalResults(): int
+    public function totalResults(): int
     {
         return $this->totalResults;
     }
 
-    protected function totalPages(): int
+    public function totalPages(): int
     {
         return $this->totalPages;
     }
