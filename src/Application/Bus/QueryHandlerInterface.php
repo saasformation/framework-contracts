@@ -4,5 +4,11 @@ namespace SaaSFormation\Framework\Contracts\Application\Bus;
 
 interface QueryHandlerInterface
 {
-    public function ask(QueryInterface $query): QueryResultInterface;
+    /**
+     * @template Q of QueryInterface
+     *
+     * @param Q $query
+     * @return QueryResultInterface
+     */
+    public function ask($query): QueryResultInterface;
 }

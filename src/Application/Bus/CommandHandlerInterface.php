@@ -6,5 +6,11 @@ use SaaSFormation\Framework\Contracts\Domain\DomainEventStream;
 
 interface CommandHandlerInterface
 {
-    public function handle(CommandInterface $command): DomainEventStream;
+    /**
+     * @template C of CommandInterface
+     *
+     * @param C $command
+     * @return DomainEventStream
+     */
+    public function handle($command): DomainEventStream;
 }
