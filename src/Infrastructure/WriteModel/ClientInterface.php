@@ -3,14 +3,14 @@
 namespace SaaSFormation\Framework\Contracts\Infrastructure\WriteModel;
 
 use SaaSFormation\Framework\SharedKernel\Common\Identity\IdInterface;
-use SaaSFormation\Framework\SharedKernel\Domain\AbstractAggregate;
+use SaaSFormation\Framework\SharedKernel\Domain\Messages\DomainEventInterface;
 
 interface ClientInterface
 {
     public function beginTransaction(): void;
     public function commitTransaction(): void;
     public function rollbackTransaction(): void;
-    public function save(AbstractAggregate $aggregate): void;
+    public function save(DomainEventInterface $domainEvent): void;
 
     /**
      * @param IdInterface $aggregateId
